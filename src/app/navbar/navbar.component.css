@@ -6,6 +6,11 @@
     margin-right: 100px;
 }
 
+li>a.active {
+    background: #2b3e50;
+    font-weight: bold;
+}
+
 @media (max-width: 1200px) {
     #searchForm {
         display: none;
