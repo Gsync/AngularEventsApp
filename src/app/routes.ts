@@ -4,9 +4,14 @@ import { EventDetailsComponent } from "./events/event-details/event-details.comp
 import { CreateEventComponent } from "./events/create-event/create-event.component";
 import { NotFound404Component } from "./errors/not-found404/not-found404.component";
 import { EventRouteActivatorService } from "./events/event-details/event-route-activator.service";
+import { EventListResolverService } from "./events/shared/event-list-resolver.service";
 
 export const appRoutes: Routes = [
-  { path: "events", component: EventsListComponent },
+  {
+    path: "events",
+    component: EventsListComponent,
+    resolve: { events: EventListResolverService }
+  },
   {
     path: "events/new",
     component: CreateEventComponent,
