@@ -14,6 +14,7 @@ import { NotFound404Component } from "./errors/not-found404/not-found404.compone
 import { EventRouteActivatorService } from "./events/event-details/event-route-activator.service";
 import { EventListResolverService } from "./events/shared/event-list-resolver.service";
 import { AuthService } from "./user/auth.service";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,12 @@ import { AuthService } from "./user/auth.service";
     CreateEventComponent,
     NotFound404Component
   ],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [
     EventService,
     EventRouteActivatorService,

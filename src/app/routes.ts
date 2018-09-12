@@ -5,7 +5,6 @@ import { CreateEventComponent } from "./events/create-event/create-event.compone
 import { NotFound404Component } from "./errors/not-found404/not-found404.component";
 import { EventRouteActivatorService } from "./events/event-details/event-route-activator.service";
 import { EventListResolverService } from "./events/shared/event-list-resolver.service";
-import { ProfileComponent } from "./user/profile/profile.component";
 
 export const appRoutes: Routes = [
   {
