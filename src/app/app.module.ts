@@ -15,9 +15,10 @@ import { EventRouteActivatorService } from "./events/event-details/event-route-a
 import { EventListResolverService } from "./events/shared/event-list-resolver.service";
 import { AuthService } from "./user/auth.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { CreateSessionComponent } from './events/create-session/create-session.component';
-import { SessionListComponent } from './events/session-list/session-list.component';
-import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-well.component';
+import { CreateSessionComponent } from "./events/create-session/create-session.component";
+import { SessionListComponent } from "./events/session-list/session-list.component";
+import { CollapsibleWellComponent } from "./common/collapsible-well/collapsible-well.component";
+import { DurationPipe } from "./events/shared/duration.pipe";
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-
     NotFound404Component,
     CreateSessionComponent,
     SessionListComponent,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,

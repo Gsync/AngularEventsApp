@@ -41,9 +41,9 @@ const events: IEvent[] = [
     price: 599.99,
     imageUrl: "/assets/images/angularconnect-shield.png",
     location: {
-      address: "1057 DT",
-      city: "London",
-      country: "England"
+      address: "123 XYZ",
+      city: "Calgary",
+      country: "Alberta"
     },
     sessions: [
       {
