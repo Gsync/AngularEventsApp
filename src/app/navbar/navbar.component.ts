@@ -10,7 +10,7 @@ import { EventService } from "../events/shared/event.service";
 })
 export class NavbarComponent implements OnInit {
   searchTerm = "";
-  foundSessions: ISession;
+  foundSessions: ISession[];
 
   constructor(
     public authService: AuthService,
@@ -22,7 +22,6 @@ export class NavbarComponent implements OnInit {
   searchSessions(searchTerm) {
     this.eventService.searchSessions(searchTerm).subscribe(sessions => {
       this.foundSessions = sessions;
-      console.log(this.foundSessions);
     });
   }
 }

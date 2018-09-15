@@ -21,6 +21,7 @@ import { CollapsibleWellComponent } from "./common/collapsible-well/collapsible-
 import { DurationPipe } from "./events/shared/duration.pipe";
 import { JQ_TOKEN } from "./common/jQuery.service";
 import { SimpleModalComponent } from "./common/simple-modal/simple-modal.component";
+import { ModalTriggerDirective } from "./common/modal-trigger.directive";
 
 let jQuery = window["$"];
 
@@ -37,6 +38,7 @@ let jQuery = window["$"];
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe,
+    ModalTriggerDirective,
     SimpleModalComponent
   ],
   imports: [
@@ -50,7 +52,7 @@ let jQuery = window["$"];
     EventRouteActivatorService,
     EventListResolverService,
     { provide: "canDeactivateCreateEvent", useValue: checkDirtyState },
-    { provide: "JQ_TOKEN", useValue: jQuery },
+    { provide: JQ_TOKEN, useValue: jQuery },
     AuthService
   ],
   bootstrap: [AppComponent]
