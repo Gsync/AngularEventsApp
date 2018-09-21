@@ -22,6 +22,8 @@ import { DurationPipe } from "./events/shared/duration.pipe";
 import { JQ_TOKEN } from "./common/jQuery.service";
 import { SimpleModalComponent } from "./common/simple-modal/simple-modal.component";
 import { ModalTriggerDirective } from "./common/modal-trigger.directive";
+import { UpvoteComponent } from "./events/event-details/upvote/upvote.component";
+import { VoterService } from "./events/event-details/voter.service";
 
 let jQuery = window["$"];
 
@@ -39,7 +41,8 @@ let jQuery = window["$"];
     CollapsibleWellComponent,
     DurationPipe,
     ModalTriggerDirective,
-    SimpleModalComponent
+    SimpleModalComponent,
+    UpvoteComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ let jQuery = window["$"];
     EventListResolverService,
     { provide: "canDeactivateCreateEvent", useValue: checkDirtyState },
     { provide: JQ_TOKEN, useValue: jQuery },
-    AuthService
+    AuthService,
+    VoterService
   ],
   bootstrap: [AppComponent]
 })
