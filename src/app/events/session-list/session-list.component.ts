@@ -17,7 +17,7 @@ export class SessionListComponent implements OnInit, OnChanges {
 
   constructor(
     private voterService: VoterService,
-    private authService: AuthService
+    public authService: AuthService
   ) {}
 
   ngOnChanges() {
